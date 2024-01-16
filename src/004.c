@@ -28,9 +28,7 @@ int main(void) {
     for (long i = NSTART; i < NEND; ++i) {
         for (long j = NSTART; j < NEND; ++j) {
             long n = i * j;
-            if (is_palindrome(n) && (n > max_palindrome))  {
-                max_palindrome = n;
-            }
+            if (is_palindrome(n) && (n > max_palindrome)) max_palindrome = n;
         }
     }
     printf("max palindrome = %zu\n", max_palindrome);

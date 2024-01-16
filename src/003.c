@@ -2,14 +2,9 @@
 #include "stdbool.h"
 #include <math.h>
 
-#define N 600851475143
+#include "../lib/common.c"
 
-bool is_composite(int n) {
-    for (int i = 2; i < n; ++i) {
-        if (n % i == 0) return true;
-    }
-    return false;
-}
+#define N 600851475143
 
 int main(void) {
     long bound = (long)sqrt((double)N);
