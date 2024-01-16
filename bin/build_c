@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -xe
+
+gcc -Wall -Wextra -o target/$1 src/$1.c -lm
+
+./target/$1
