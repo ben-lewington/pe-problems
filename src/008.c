@@ -1,54 +1,8 @@
 #include <stdbool.h>
-#include <stdint.h>
 #include <stdio.h>
 
-#include "../lib/common.c"
-
-#define N 13
-
-typedef struct {
-    uint8_t view[N];
-} Window;
-
-void window_push(Window *w, uint8_t new) {
-    for (int i = 0; i < N; ++i) {
-        uint8_t *c = &w->view[i];
-        if (*c == 10) {
-            *c = new;
-            return;
-        }
-    }
-    for (int i = 0; i < N-1; ++i) {
-        w->view[i] = w->view[i + 1];
-    }
-    w->view[N - 1] = new;
-}
-
-Window window_new() {
-    Window w;
-    for (int i = 0; i < N; ++i) {
-        w.view[i] = 10;
-    }
-    return w;
-}
-
-long window_product(Window w) {
-    long product = 1;
-    for (int i = 0; i < N; ++i) {
-        uint8_t *c = &w.view[i];
-        if (*c == 10) return product;
-        product *= *c;
-    }
-    return product;
-}
-
-void window_print(Window w) {
-    printf("Window {\n");
-    for (int i = 0; i < N; ++i) {
-        printf("    %d\n", w.view[i]);
-    }
-    printf("} // Window\n");
-}
+#define WINDOW_VIEW_SIZE 13
+#include "../lib/window.c"
 
 static char *NUMS = "73167176531330624919225119674426574742355349194934"
                     "96983520312774506326239578318016984801869478851843"
@@ -85,6 +39,6 @@ int main(void) {
         ++x;
     }
 
-    printf("max product %zu", max_product);
+    printf("max product %zu\n", max_product);
     return 0;
 }

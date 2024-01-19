@@ -16,4 +16,3 @@ bool is_composite(long n) {
 #else
     bool is_composite(long n);
 #endif // COMMON_FUNCTIONS_IMPL
-
