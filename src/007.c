@@ -6,16 +6,13 @@
 #define N 10001
 
 int main(void) {
-    int p = 2;
-    int pn = 1;
-    int i = 0;
-    while (pn < N) {
-        ++i;
-        if (is_composite(2*i + 1)) continue;
-        p = 2*i + 1;
-        ++pn;
+    IterPrimes ip = primes_new();
+
+    for (long i = 0; i < N - 1; ++i) {
+        primes_next(&ip);
     }
-    printf("%dth prime: %d\n", N, p);
+
+    printf("%dth prime: %zu\n", N, primes_next(&ip));
 
     return 0;
 }
