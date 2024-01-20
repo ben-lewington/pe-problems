@@ -13,8 +13,6 @@ int main(void) {
         long p = primes_next(&ip);
         if (p >= N) break;
 
-        // printf("%zu\n", p);
-
         sum += p;
     }
 
