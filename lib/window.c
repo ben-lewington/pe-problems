@@ -28,27 +28,29 @@ void window_push(Window *w, uint8_t new) {
             return;
         }
     }
-    for (int i = 0; i < WINDOW_VIEW_SIZE-1; ++i) {
+
+    for (int i = 0; i < WINDOW_VIEW_SIZE-1; ++i)
         w->view[i] = w->view[i + 1];
-    }
+
     w->view[WINDOW_VIEW_SIZE - 1] = new;
 }
 
 long window_product(Window w) {
     long product = 1;
     for (int i = 0; i < WINDOW_VIEW_SIZE; ++i) {
-        uint8_t *c = &w.view[i];
-        if (*c == 10) return product;
-        product *= *c;
+        uint8_t c = w.view[i];
+        if (c == 10) return product;
+        product *= c;
     }
     return product;
 }
 
 void window_print(Window w) {
     printf("Window {\n");
-    for (int i = 0; i < WINDOW_VIEW_SIZE; ++i) {
+
+    for (int i = 0; i < WINDOW_VIEW_SIZE; ++i)
         printf("    %d\n", w.view[i]);
-    }
+
     printf("} // Window\n");
 }
 

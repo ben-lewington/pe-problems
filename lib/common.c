@@ -6,9 +6,10 @@
 #define COMMON_FUNCTIONS_SQRT_AFTER pow(10, 5)
 
 bool is_composite_upto(long n, long check_upto) {
-    for (long i = 2; i < check_upto; ++i) {
-        if (n % i == 0) return true;
-    }
+    for (long i = 2; i < check_upto; ++i)
+        if (n % i == 0)
+            return true;
+
     return false;
 }
 

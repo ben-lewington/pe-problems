@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        :root {
+            --body-bg: rgb(50,50,50);
+            --header-bg: rgb(100,100,100);
+        }
+        * { box-sizing: border-box; }
+        ul, ol {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 0;
+            font-size: 1.25rem;
+            background: var(--body-bg);
+            display: grid;
+            grid-template-rows: auto 1fr;
+        }
+        header {
+            position: sticky;
+            background-color: var(--header-bg);
+            display: flex;
+            justify-content: space-evenly;
+            align-content: start;
+            nav {
+                display: flex;
+                align-items: flex-end;
+                ol, ul {
+                    li:where(:has(> a[aria-current])) { background: var(--body-bg); }
+                    font-size: 1.75rem;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5rem;
+                    list-style-type: none;
+                }
+            }
+        }
+    </style>
+    <body>
+        <header>
+            <a href="index.html"><img src="" alt="Logo"></a>
+            <h1>Page Title</h1>
+            <nav>
+                <ol>
+                     <li>
+                         <a href="index.html" aria-current="page">Home</a>
+                     </li>
+                     <li>
+                         <a href="foo.html">Home</a>
+                     </li>
+                     <li>
+                         <a href="bar.html">Home</a>
+                     </li>
+                     <li>
+                         <a href="baz.html">Home</a>
+                     </li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            <h2>Hello</h2>
+            <p>Is it me?</p>
+            <p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis modi
+                 necessitatibus minima molestiae officiis nostrum nam, odio soluta quos optio
+                 dolorem est nesciunt veniam repudiandae, possimus ipsa perferendis placeat eos?
+             </p>
+
+        </main>
+    </body>
+</html>
